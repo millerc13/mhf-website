@@ -4,6 +4,7 @@
   "private": true,
   "description": "MHF — My Happy Family static marketing site + client palette gallery (served for Forge hosting).",
   "scripts": {
+    "build": "echo 'static site — no build step'",
     "start": "node server.js"
   },
   "engines": {
