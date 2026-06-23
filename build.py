@@ -134,6 +134,8 @@ FOOTER = f"""<div class="brand-ticker" aria-hidden="true">
 </footer>
 <script src="js/main.js"></script>
 {{extra_scripts}}
+<!-- CLIENT PREVIEW ONLY — color palette previewer. Remove this line + js/theme-switcher.js before launch. -->
+<script src="js/theme-switcher.js"></script>
 </body>
 </html>
 """

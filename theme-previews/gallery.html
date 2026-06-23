@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MHF — Color Palette Options</title>
+<style>
+  :root { --bg:#11130f; --card:#1b1e18; --line:#2e322a; --txt:#f3efe4; --mut:#a7a193; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--txt);
+    font-family:"Segoe UI",system-ui,-apple-system,sans-serif; line-height:1.55;
+    padding:48px 22px 80px; }
+  .wrap { max-width:1180px; margin:0 auto; }
+  header.top { text-align:center; margin-bottom:14px; }
+  header.top .kicker { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase;
+    color:#c8973a; font-weight:700; }
+  header.top h1 { font-size:2.1rem; margin:10px 0 6px; font-weight:600; letter-spacing:-.01em; }
+  header.top p { color:var(--mut); max-width:640px; margin:0 auto; font-size:1rem; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
+    gap:26px; margin-top:42px; }
+  figure { background:var(--card); border:1px solid var(--line); border-radius:14px;
+    overflow:hidden; }
+  figure a { display:block; line-height:0; }
+  figure img { width:100%; height:auto; display:block; transition:opacity .15s; }
+  figure a:hover img { opacity:.9; }
+  figcaption { padding:15px 17px 17px; }
+  .row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+  .name { font-size:1.06rem; font-weight:600; }
+  .num { font-size:.74rem; color:var(--mut); font-weight:600; letter-spacing:.06em; }
+  .note { color:var(--mut); font-size:.86rem; margin-top:3px; }
+  .sw { display:flex; gap:0; margin-top:12px; border-radius:6px; overflow:hidden;
+    box-shadow:0 1px 4px rgba(0,0,0,.4); }
+  .sw i { flex:1; height:26px; }
+  .hint { text-align:center; color:var(--mut); font-size:.84rem; margin-top:34px; }
+  footer { text-align:center; color:var(--mut); font-size:.82rem; margin-top:46px;
+    border-top:1px solid var(--line); padding-top:24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="kicker">MHF — My Happy Family</div>
+    <h1>Website Color Palette Options</h1>
+    <p>Eight alternative color schemes for the site, plus the current one for comparison.
+       Same site, same content — only the colors change. Click any image to view it full size.</p>
+  </header>
+
+  <div class="grid" id="grid"></div>
+
+  <p class="hint">Once you've shortlisted a favorite, you can click through them live on the
+     site itself using the “Theme” button in the bottom-right corner of any page.</p>
+
+  <footer>Prepared for review · My Happy Family</footer>
+</div>
+
+<script>
+  var THEMES = [
+    { f:"01-heritage.jpeg",      n:"Heritage Green & Gold", note:"The current site palette",
+      sw:["#1b3527","#f7f1e2","#c8973a","#2c5243"] },
+    { f:"02-navy-brass.jpeg",    n:"Midnight Navy & Brass", note:"Old-money, banking blue",
+      sw:["#1d2d44","#f4f0e6","#b5894a","#34506e"] },
+    { f:"03-oxblood.jpeg",       n:"Oxblood & Antique Gold", note:"Leather-bound library",
+      sw:["#5a2231","#f6efe5","#b08237","#7c3a48"] },
+    { f:"04-charcoal.jpeg",      n:"Charcoal & Champagne", note:"Modern, understated luxury",
+      sw:["#2b2b2b","#f5f1ea","#bfa06a","#474747"] },
+    { f:"05-forest-copper.jpeg", n:"Forest & Copper", note:"Warm, earthy, hand-crafted",
+      sw:["#243b2f","#f4efe3","#b96f3f","#3b5a49"] },
+    { f:"06-slate-gold.jpeg",    n:"Slate Blue & Gold", note:"Coastal, calm, maritime",
+      sw:["#20414a","#f3f1e9","#c39a3e","#356069"] },
+    { f:"07-plum.jpeg",          n:"Plum & Antique Gold", note:"Distinguished, regal",
+      sw:["#3a2742","#f5f0e9","#b58a4c","#543b5e"] },
+    { f:"08-espresso.jpeg",      n:"Espresso & Cognac", note:"Whiskey, walnut, timeless",
+      sw:["#3a2c20","#f5eee0","#c08a3e","#574332"] },
+    { f:"09-indigo.jpeg",        n:"Royal Indigo & Gold", note:"Bold, confident, executive",
+      sw:["#283164","#f3f1ea","#c6a44a","#3f4a87"] }
+  ];
+  var grid = document.getElementById("grid");
+  THEMES.forEach(function (t, i) {
+    var sw = t.sw.map(function (c) { return '<i style="background:'+c+'"></i>'; }).join("");
+    var fig = document.createElement("figure");
+    fig.innerHTML =
+      '<a href="'+t.f+'" target="_blank" rel="noopener"><img src="'+t.f+'" alt="'+t.n+' preview" loading="lazy"></a>' +
+      '<figcaption>' +
+        '<div class="row"><span class="name">'+t.n+'</span>' +
+        '<span class="num">'+(i===0?"CURRENT":("OPTION "+i))+'</span></div>' +
+        '<div class="note">'+t.note+'</div>' +
+        '<div class="sw">'+sw+'</div>' +
+      '</figcaption>';
+    grid.appendChild(fig);
+  });
+</script>
+</body>
+</html>

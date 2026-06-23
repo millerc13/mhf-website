@@ -1,0 +1,12 @@
+{
+  "name": "mhf-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MHF — My Happy Family static marketing site + client palette gallery (served for Forge hosting).",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
