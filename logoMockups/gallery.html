@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MHF — Logo Concepts</title>
+<style>
+  :root { --bg:#11130f; --card:#1b1e18; --line:#2e322a; --txt:#f3efe4; --mut:#a7a193; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { background:var(--bg); color:var(--txt);
+    font-family:"Segoe UI",system-ui,-apple-system,sans-serif; line-height:1.55;
+    padding:48px 22px 80px; }
+  .wrap { max-width:1100px; margin:0 auto; }
+  header.top { text-align:center; margin-bottom:14px; }
+  header.top .kicker { font-size:.72rem; letter-spacing:.22em; text-transform:uppercase;
+    color:#c8973a; font-weight:700; }
+  header.top h1 { font-size:2.1rem; margin:10px 0 6px; font-weight:600; letter-spacing:-.01em; }
+  header.top p { color:var(--mut); max-width:640px; margin:0 auto; font-size:1rem; }
+  .sheets { display:flex; flex-direction:column; gap:30px; margin-top:42px; }
+  figure { background:var(--card); border:1px solid var(--line); border-radius:14px;
+    overflow:hidden; }
+  figure a { display:block; line-height:0; }
+  figure img { width:100%; height:auto; display:block; transition:opacity .15s; }
+  figure a:hover img { opacity:.92; }
+  figcaption { padding:14px 18px 16px; display:flex; align-items:center;
+    justify-content:space-between; gap:10px; }
+  .name { font-size:1.02rem; font-weight:600; }
+  .num { font-size:.74rem; color:var(--mut); font-weight:600; letter-spacing:.06em; }
+  .hint { text-align:center; color:var(--mut); font-size:.84rem; margin-top:34px; }
+  footer { text-align:center; color:var(--mut); font-size:.82rem; margin-top:30px;
+    border-top:1px solid var(--line); padding-top:24px; }
+  nav.back { text-align:center; margin-top:18px; }
+  nav.back a { color:#c8973a; font-size:.86rem; text-decoration:none; font-weight:600; }
+  nav.back a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="kicker">MHF — My Happy Family</div>
+    <h1>Logo Concept Options</h1>
+    <p>A range of logo directions for the MHF mark. Each sheet below holds several
+       concepts — click any sheet to view it full size and zoom in on the details.</p>
+  </header>
+
+  <div class="sheets" id="sheets"></div>
+
+  <p class="hint">Note the numbers of any you like (e.g. “Sheet 2, top-right”) and we'll
+     refine those into finished options.</p>
+
+  <nav class="back"><a href="/preview">← View the color palette options</a></nav>
+  <footer>Prepared for review · My Happy Family</footer>
+</div>
+
+<script>
+  var SHEETS = [
+    "logos1.png", "logos2.png", "logos3.png", "logos4.png", "logos5.png"
+  ];
+  var sheets = document.getElementById("sheets");
+  SHEETS.forEach(function (f, i) {
+    var fig = document.createElement("figure");
+    fig.innerHTML =
+      '<a href="/logos/'+f+'" target="_blank" rel="noopener">' +
+        '<img src="/logos/'+f+'" alt="Logo concept sheet '+(i+1)+'" loading="lazy"></a>' +
+      '<figcaption><span class="name">Logo Concepts</span>' +
+        '<span class="num">SHEET '+(i+1)+' OF '+SHEETS.length+'</span></figcaption>';
+    sheets.appendChild(fig);
+  });
+</script>
+</body>
+</html>

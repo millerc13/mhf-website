@@ -10,6 +10,7 @@ const path = require("path");
 const PORT = process.env.PORT || 3000;
 const SITE_DIR = path.join(__dirname, "site");
 const PREVIEW_DIR = path.join(__dirname, "theme-previews");
+const LOGOS_DIR = path.join(__dirname, "logoMockups");
 
 const TYPES = {
   ".html": "text/html; charset=utf-8",
@@ -61,6 +62,16 @@ const server = http.createServer((req, res) => {
   }
   if (urlPath.startsWith("/preview/")) {
     const f = resolveIn(PREVIEW_DIR, urlPath.slice("/preview".length));
+    if (!f) return send(res, 400, "400 — Bad Request");
+    return sendFile(res, f);
+  }
+
+  // ---- Logo mockups gallery: anything under /logos maps into logoMockups/ ----
+  if (urlPath === "/logos" || urlPath === "/logos/") {
+    return sendFile(res, path.join(LOGOS_DIR, "gallery.html"));
+  }
+  if (urlPath.startsWith("/logos/")) {
+    const f = resolveIn(LOGOS_DIR, urlPath.slice("/logos".length));
     if (!f) return send(res, 400, "400 — Bad Request");
     return sendFile(res, f);
   }

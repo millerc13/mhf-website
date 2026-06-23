@@ -146,6 +146,94 @@
         "--press": "6px 6px 0 rgba(24,29,62,0.12)",
         "--press-lg": "9px 9px 0 rgba(24,29,62,0.14)"
       }
+    },
+
+    /* ---- 3 more refined / luxurious options ---- */
+    {
+      id: "emerald",
+      name: "Emerald & Rose Gold",
+      note: "Jewel-box green, soft blush metal",
+      vars: {
+        "--green": "#0e3b2c", "--green-deep": "#06241a", "--green-soft": "#1d5742",
+        "--cream": "#f4f0ea", "--cream-dark": "#e6ddcd",
+        "--gold": "#c08a72", "--gold-soft": "#e0b6a4",
+        "--ink": "#1d2722", "--ink-soft": "#536058", "--white": "#fffdf9",
+        "--rule": "rgba(14,59,44,0.25)",
+        "--press": "6px 6px 0 rgba(6,36,26,0.12)",
+        "--press-lg": "9px 9px 0 rgba(6,36,26,0.14)"
+      }
+    },
+    {
+      id: "onyx",
+      name: "Onyx & Gold",
+      note: "Black-tie, pure gold",
+      vars: {
+        "--green": "#1c1b18", "--green-deep": "#0d0c0a", "--green-soft": "#38362f",
+        "--cream": "#f3efe6", "--cream-dark": "#e5ddc9",
+        "--gold": "#c9a227", "--gold-soft": "#e6cd72",
+        "--ink": "#211f1a", "--ink-soft": "#5e584c", "--white": "#fffdf6",
+        "--rule": "rgba(28,27,24,0.22)",
+        "--press": "6px 6px 0 rgba(13,12,10,0.12)",
+        "--press-lg": "9px 9px 0 rgba(13,12,10,0.14)"
+      }
+    },
+    {
+      id: "sapphire",
+      name: "Sapphire & Champagne",
+      note: "Deep royal blue, soft champagne",
+      vars: {
+        "--green": "#143a6b", "--green-deep": "#0c2549", "--green-soft": "#2a548c",
+        "--cream": "#f2f1ec", "--cream-dark": "#e1ded0",
+        "--gold": "#cbb079", "--gold-soft": "#e6d2a4",
+        "--ink": "#1b2230", "--ink-soft": "#525a6b", "--white": "#fdfdf9",
+        "--rule": "rgba(20,58,107,0.25)",
+        "--press": "6px 6px 0 rgba(12,37,73,0.12)",
+        "--press-lg": "9px 9px 0 rgba(12,37,73,0.14)"
+      }
+    },
+
+    /* ---- 3 bold / adventurous options ---- */
+    {
+      id: "miami",
+      name: "Miami Sunset",
+      note: "Bold magenta & hot orange",
+      vars: {
+        "--green": "#9c2c6b", "--green-deep": "#6e1a4a", "--green-soft": "#c2487f",
+        "--cream": "#fdefe8", "--cream-dark": "#f6dccb",
+        "--gold": "#e8602a", "--gold-soft": "#ff9d63",
+        "--ink": "#3a2230", "--ink-soft": "#7a5566", "--white": "#fffaf5",
+        "--rule": "rgba(156,44,107,0.25)",
+        "--press": "6px 6px 0 rgba(110,26,74,0.12)",
+        "--press-lg": "9px 9px 0 rgba(110,26,74,0.14)"
+      }
+    },
+    {
+      id: "electric-teal",
+      name: "Electric Teal & Coral",
+      note: "Vivid, tropical, high-energy",
+      vars: {
+        "--green": "#0d5c63", "--green-deep": "#073d42", "--green-soft": "#1c828b",
+        "--cream": "#eef4f0", "--cream-dark": "#d9e6df",
+        "--gold": "#e8513f", "--gold-soft": "#ff8e7c",
+        "--ink": "#15302f", "--ink-soft": "#4f635f", "--white": "#fcfffd",
+        "--rule": "rgba(13,92,99,0.25)",
+        "--press": "6px 6px 0 rgba(7,61,66,0.12)",
+        "--press-lg": "9px 9px 0 rgba(7,61,66,0.14)"
+      }
+    },
+    {
+      id: "cosmic-grape",
+      name: "Cosmic Grape",
+      note: "Deep violet & electric pink",
+      vars: {
+        "--green": "#3b1f6b", "--green-deep": "#261247", "--green-soft": "#56398f",
+        "--cream": "#f3eef5", "--cream-dark": "#e4d9ec",
+        "--gold": "#d6336c", "--gold-soft": "#f06ea0",
+        "--ink": "#271d33", "--ink-soft": "#5c5170", "--white": "#fffbff",
+        "--rule": "rgba(59,31,107,0.25)",
+        "--press": "6px 6px 0 rgba(38,18,71,0.12)",
+        "--press-lg": "9px 9px 0 rgba(38,18,71,0.14)"
+      }
     }
   ];
 
