@@ -94,7 +94,7 @@
     var sw = t.sw.map(function (c) { return '<i style="background:'+c+'"></i>'; }).join("");
     var fig = document.createElement("figure");
     fig.innerHTML =
-      '<a href="'+t.f+'" target="_blank" rel="noopener"><img src="'+t.f+'" alt="'+t.n+' preview" loading="lazy"></a>' +
+      '<a href="/preview/'+t.f+'" target="_blank" rel="noopener"><img src="/preview/'+t.f+'" alt="'+t.n+' preview" loading="lazy"></a>' +
       '<figcaption>' +
         '<div class="row"><span class="name">'+t.n+'</span>' +
         '<span class="num">'+(i===0?"CURRENT":("OPTION "+i))+'</span></div>' +
